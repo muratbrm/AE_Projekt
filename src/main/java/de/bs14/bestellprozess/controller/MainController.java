@@ -1,7 +1,8 @@
-package de.bs14.bestellprozess;
+package de.bs14.bestellprozess.controller;
 
-import de.bs14.bestellprozess.User;
-import de.bs14.bestellprozess.UserRepository;
+import de.bs14.bestellprozess.entity.User;
+import de.bs14.bestellprozess.interfaces.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

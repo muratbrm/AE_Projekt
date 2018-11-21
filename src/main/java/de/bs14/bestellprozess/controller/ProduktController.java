@@ -1,8 +1,10 @@
-package de.bs14.bestellprozess;
+package de.bs14.bestellprozess.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import de.bs14.bestellprozess.entity.ProduktModel;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -13,6 +15,7 @@ public class ProduktController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/produkt")
+    
     public ProduktModel produktModel(@RequestParam(value="name", defaultValue="World") String name) {
         return new ProduktModel(counter.incrementAndGet(),
                 String.format(template, name));

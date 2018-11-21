@@ -1,4 +1,4 @@
-package de.bs14.bestellprozess;
+package de.bs14.bestellprozess.entity;
 
 public class ProduktModel {
 

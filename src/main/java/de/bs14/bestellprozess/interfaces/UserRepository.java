@@ -1,6 +1,8 @@
-package de.bs14.bestellprozess;
+package de.bs14.bestellprozess.interfaces;
 
-import de.bs14.bestellprozess.User;
+import org.springframework.data.repository.CrudRepository;
+
+import de.bs14.bestellprozess.entity.User;
 
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
