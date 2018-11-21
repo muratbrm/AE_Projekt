@@ -21,15 +21,18 @@ public class ProductService {
 	@Autowired
 	private ProductRepository productRepository;
 	
-	private List<Product> product = new ArrayList<>();
-	
 	public Integer createProduct() {
-		this.product.add(new Product(new AtomicInteger().getAndIncrement(), Integer.toUnsignedLong(353535553), 30.90, "/home/bestellprozess_images/", "kurzer Text", "langer Text", "Überschrift"));
-		productRepository.saveAll(this.product);
+		Product product = new Product(new AtomicInteger().getAndIncrement(), Integer.toUnsignedLong(353535553), 30.90, "/home/bestellprozess_images/", "kurzer Text", "langer Text", "Überschrift");
+		productRepository.save(product);
 		return product != null ? 200 : 404;
 	}
 	
 	public List<Product> showProducts() {
-		return this.product;
+		List<Product> products = new ArrayList<>();
+		productRepository.findAll().forEach(products::add);
+		return products;
 	}
+	
+	
+	
 }
