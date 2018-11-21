@@ -31,4 +31,9 @@ public class ProductController {
 	public List<Product> showProducts(){
 		return productService.showProducts();
 	}
+	
+	@RequestMapping(path="/delete", method=RequestMethod.DELETE)
+	public String deleteProduct() {
+		return productService.deleteProduct();
+	}
 }

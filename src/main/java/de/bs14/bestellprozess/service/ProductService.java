@@ -21,8 +21,8 @@ public class ProductService {
 	@Autowired
 	private ProductRepository productRepository;
 	
+	private Product product = new Product(new AtomicInteger().getAndIncrement(), Integer.toUnsignedLong(353535553), 30.90, "/home/bestellprozess_images/", "kurzer Text", "langer Text", "Überschrift");
 	public Integer createProduct() {
-		Product product = new Product(new AtomicInteger().getAndIncrement(), Integer.toUnsignedLong(353535553), 30.90, "/home/bestellprozess_images/", "kurzer Text", "langer Text", "Überschrift");
 		productRepository.save(product);
 		return product != null ? 200 : 404;
 	}
@@ -33,6 +33,10 @@ public class ProductService {
 		return products;
 	}
 	
+	public String deleteProduct() {
+		productRepository.delete(product);
+		return "Produkt wurde gelöscht";
+	}
 	
 	
 }
