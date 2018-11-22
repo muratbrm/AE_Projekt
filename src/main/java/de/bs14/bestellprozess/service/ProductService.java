@@ -22,6 +22,8 @@ public class ProductService {
 	private ProductRepository productRepository;
 	
 	private Product product = new Product(new AtomicInteger().getAndIncrement(), Integer.toUnsignedLong(353535553), 30.90, "/home/bestellprozess_images/", "kurzer Text", "langer Text", "Überschrift");
+	
+	
 	public Integer createProduct() {
 		productRepository.save(product);
 		return product != null ? 200 : 404;
