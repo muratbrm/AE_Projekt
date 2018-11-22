@@ -7,6 +7,7 @@ package de.bs14.bestellprozess.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +21,10 @@ public class ProductService {
 	
 	@Autowired
 	private ProductRepository productRepository;
+
 	
-	private Product product = new Product(new AtomicInteger().getAndIncrement(), Integer.toUnsignedLong(353535553), 30.90, "/home/bestellprozess_images/", "kurzer Text", "langer Text", "Überschrift");
 	
-	
-	public Integer createProduct() {
+	public Integer createProduct(Product product) {
 		productRepository.save(product);
 		return product != null ? 200 : 404;
 	}
@@ -35,9 +35,16 @@ public class ProductService {
 		return products;
 	}
 	
-	public String deleteProduct() {
-		productRepository.delete(product);
+	public String deleteProduct(Integer id) {
+		productRepository.deleteById(id);
 		return "Produkt wurde gelöscht";
+	}
+
+	public void updateProduct(Product product) {
+		Optional<Product> p =productRepository.findById(product.getProduct_id());
+		productRepository.delete(p.get());
+		productRepository.save(product);
+		
 	}
 	
 	

@@ -38,8 +38,7 @@ public class ProductControllerTest {
 
 	 	@Test
 	 	public void testCreateProduct() {
-	 		ProductController s = new ProductController();
-	 		assertEquals(Integer.valueOf(200), s.createProduct());
+	 		assertEquals(Integer.valueOf(200), productService.createProduct(null));
 	 	}
 	 
 	 

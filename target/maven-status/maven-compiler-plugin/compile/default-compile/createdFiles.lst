@@ -3,11 +3,11 @@ de/bs14/bestellprozess/entity/Customer.class
 de/bs14/bestellprozess/controller/MainController.class
 de/bs14/bestellprozess/controller/OrderController.class
 de/bs14/bestellprozess/entity/Orders.class
+de/bs14/bestellprozess/config/MvcConfig.class
 de/bs14/bestellprozess/service/ProductService.class
 de/bs14/bestellprozess/BestellProzessApplikation.class
 de/bs14/bestellprozess/service/OrderService.class
 de/bs14/bestellprozess/controller/ProductController.class
 de/bs14/bestellprozess/repository/ProductRepository.class
-de/bs14/bestellprozess/controller/WelcomeController.class
 de/bs14/bestellprozess/controller/CustomerController.class
 de/bs14/bestellprozess/entity/Product.class

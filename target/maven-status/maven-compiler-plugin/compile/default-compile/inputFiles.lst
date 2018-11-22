@@ -3,6 +3,7 @@
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/controller/ProductController.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/service/CustomerService.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/BestellProzessApplikation.java
+/root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/config/MvcConfig.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/entity/Product.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/entity/Orders.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/controller/MainController.java
@@ -10,4 +11,3 @@
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/entity/Customer.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/repository/ProductRepository.java
 /root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/service/ProductService.java
-/root/git/AE_Projekt/src/main/java/de/bs14/bestellprozess/controller/WelcomeController.java
